@@ -23,8 +23,8 @@ class _LoginPageState extends State<LoginPage> {
     final url = Uri.parse('https://www.melivecode.com/api/login');
     final header = {'Content-Type': 'application/json'};
     final body = jsonEncode({
-      'username': _usernameController.text,
-      'password': _passwordController.text
+      'username': _usernameController.text, //karn.yong@melivecode.com
+      'password': _passwordController.text  //melivecode
     });
     final response = await http.post(url, headers: header, body: body);
     if (response.statusCode == 200) {
@@ -35,6 +35,8 @@ class _LoginPageState extends State<LoginPage> {
             builder: (context) => TabMenuPage(
                 username: jsonResponse['user']['username']))
       );
+    } else {
+      _showSnackBar('I Kway');
     }
   }
   
