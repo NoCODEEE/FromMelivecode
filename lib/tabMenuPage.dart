@@ -14,7 +14,7 @@ class TabMenuPage extends StatefulWidget {
 
 class _TabMenuPageState extends State<TabMenuPage>{
   late String _username;
-  
+
   @override
   void initState() {
     super.initState();
@@ -35,7 +35,9 @@ class _TabMenuPageState extends State<TabMenuPage>{
                   tabs: [
                     Tab(text: 'Home'),
                     Tab(text: 'Contact'),
-                    Tab(text: 'Profile')]),
+                    Tab(text: 'Profile')
+                  ]
+              ),
             ),
             body: TabBarView(children: [
               const Center(
